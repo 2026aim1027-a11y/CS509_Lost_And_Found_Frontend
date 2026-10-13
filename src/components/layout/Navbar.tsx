@@ -6,6 +6,7 @@ import { ArrowRight, LogOut, Menu, ShieldCheck, UserRound, X } from "lucide-reac
 import Logo from "@/components/brand/Logo";
 import Avatar from "@/components/ui/Avatar";
 import { ButtonLink } from "@/components/ui/Button";
+import ScrollLink from "@/components/ui/ScrollLink";
 import { useAuth } from "@/context/AuthContext";
 import { mediaUrl } from "@/lib/api";
 import { cn } from "@/lib/cn";
@@ -132,13 +133,13 @@ export default function Navbar() {
 
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((link) => (
-            <Link
+            <ScrollLink
               key={link.href}
               href={link.href}
               className="rounded-full px-4 py-2 text-[15px] font-semibold text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
             >
               {link.label}
-            </Link>
+            </ScrollLink>
           ))}
         </nav>
 
@@ -179,9 +180,9 @@ export default function Navbar() {
           <ul className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} onClick={closeMenu} className="block rounded-2xl px-4 py-3.5 text-base font-bold hover:bg-ink/5">
+                <ScrollLink href={link.href} onClick={closeMenu} className="block rounded-2xl px-4 py-3.5 text-base font-bold hover:bg-ink/5">
                   {link.label}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
             {!loading && !user && (

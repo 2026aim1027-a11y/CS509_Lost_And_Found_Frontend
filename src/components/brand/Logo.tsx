@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ScrollLink from "@/components/ui/ScrollLink";
 import { cn } from "@/lib/cn";
 
 interface LogoMarkProps {
@@ -25,7 +25,7 @@ interface LogoProps {
 
 export default function Logo({ className, tagline = false, size = "md" }: LogoProps) {
   return (
-    <Link
+    <ScrollLink
       href="/"
       aria-label="FindIt home"
       className={cn("group inline-flex items-center gap-3 rounded-2xl", className)}
@@ -44,6 +44,6 @@ export default function Logo({ className, tagline = false, size = "md" }: LogoPr
           <span className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-muted">IIT Ropar</span>
         )}
       </span>
-    </Link>
+    </ScrollLink>
   );
 }

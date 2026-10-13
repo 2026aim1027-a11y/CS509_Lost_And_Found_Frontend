@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Logo from "@/components/brand/Logo";
+import ScrollLink from "@/components/ui/ScrollLink";
 
 const LINKS = [
   { href: "/#how-it-works", label: "How it works" },
@@ -23,9 +23,9 @@ export default function Footer() {
           <ul className="flex flex-wrap gap-x-6 gap-y-3">
             {LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-sm font-bold text-ink-soft transition-colors hover:text-brand-700">
+                <ScrollLink href={link.href} className="text-sm font-bold text-ink-soft transition-colors hover:text-brand-700">
                   {link.label}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
           </ul>

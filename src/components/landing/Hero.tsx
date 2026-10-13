@@ -6,6 +6,7 @@ import BackpackScene from "@/components/illustrations/Backpack";
 import { Bicycle, Phone } from "@/components/illustrations/Items";
 import { RewardPill, TILES, TypeTag } from "@/components/landing/ItemCard";
 import { ButtonLink } from "@/components/ui/Button";
+import { scrollOnSamePage } from "@/components/ui/ScrollLink";
 import { useAuth } from "@/context/AuthContext";
 import { cn } from "@/lib/cn";
 
@@ -105,7 +106,7 @@ export default function Hero() {
                 <ArrowRight className="size-5 transition-transform group-hover/btn:translate-x-1" aria-hidden="true" />
               </ButtonLink>
             ))}
-          <ButtonLink href="/#how-it-works" variant="secondary" size="lg" className="max-sm:w-full">
+          <ButtonLink href="/#how-it-works" variant="secondary" size="lg" className="max-sm:w-full" onClick={scrollOnSamePage}>
             See how it works
           </ButtonLink>
         </div>
